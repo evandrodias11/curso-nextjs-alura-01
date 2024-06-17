@@ -1,6 +1,8 @@
-import { useEffect, useState } from "react";
-import Link from "../src/components/Link";
-import Head from "next/head";
+// import Link from "../src/components/Link";
+// import Head from "next/head";
+import FAQScreen from "../src/screens/FAQScreen";
+
+export default FAQScreen;
 
 export async function getStaticProps() {
   const FAQ_API_URL =
@@ -20,24 +22,24 @@ export async function getStaticProps() {
   };
 }
 
-export default function FAQPage({ faq }) {
-  return (
-    <div>
-      <Head>
-        <title>FAQ - Alura Cases</title>
-      </Head>
-      <h1>Alura Cases - FAQ</h1>
-      <Link href="/">ir para home</Link>
-      <ul>
-        {faq.map(({ answer, question }) => (
-          <li key={question}>
-            <article>
-              <h2>{question}</h2>
-              <p>{answer}</p>
-            </article>
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-}
+// export default function FAQPage({ faq }) {
+//   return (
+//     <div>
+//       <Head>
+//         <title>FAQ - Alura Cases</title>
+//       </Head>
+//       <h1>Alura Cases - FAQ</h1>
+//       <Link href="/">ir para home</Link>
+//       <ul>
+//         {faq.map(({ answer, question }) => (
+//           <li key={question}>
+//             <article>
+//               <h2>{question}</h2>
+//               <p>{answer}</p>
+//             </article>
+//           </li>
+//         ))}
+//       </ul>
+//     </div>
+//   );
+// }
